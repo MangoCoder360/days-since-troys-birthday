@@ -8,9 +8,10 @@ let date_1 = new Date('10/20/2022');
 function update(){
 let date_2 = new Date();
 let difference = date_2.getTime() - date_1.getTime();
-let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+let TotalDays = Math.trunc(difference / (1000 * 3600 * 24));
 let hours =(date_2.getTime() - date_1.getTime()) / 1000;
 hours/= (60 * 60);
+hours = Math.trunc(hours);
     document.getElementById("days").innerHTML =TotalDays+" Days";
     document.getElementById("hours").innerHTML =hours+" Hours";
 }
