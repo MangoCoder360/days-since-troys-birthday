@@ -10,10 +10,16 @@ let date_2 = new Date();
 let difference = date_2.getTime() - date_1.getTime();
 let TotalDays = Math.trunc(difference / (1000 * 3600 * 24));
 let hours =(date_2.getTime() - date_1.getTime()) / 1000;
+let minutes = hours/60;
+let seconds = hours;
 hours/= (60 * 60);
 hours = Math.trunc(hours);
+minutes=Math.trunc(minutes);
+seconds = Math.trunc(seconds);
     document.getElementById("days").innerHTML =TotalDays+" Days";
     document.getElementById("hours").innerHTML =hours+" Hours";
+    document.getElementById("minutes").innerHTML =minutes+" Minutes";
+    document.getElementById("seconds").innerHTML =seconds+" Seconds";
 }
 setInterval(update,5);
 </script>
